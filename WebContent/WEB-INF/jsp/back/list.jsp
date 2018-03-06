@@ -18,7 +18,7 @@
 	<form action="<%=basePath%>List.Action" id="mainForm" method="post">
 		<div class="right">
 			<div class="current">
-				当前位置：<a href="javascript:void(0)" style="color:#6E6E6E;">内容管理</a>
+				当前位置：<a href="javascript:void(0)" style="color: #6E6E6E;">内容管理</a>
 				&gt; 内容列表
 			</div>
 			<div class="rightCont">
@@ -30,11 +30,9 @@
 					<tbody>
 						<tr>
 							<td width="90" align="right">指令名称</td>
-							<td><input type="text" class="allInput" 
-								name="command" /></td>
+							<td><input type="text" class="allInput" name="command" /></td>
 							<td width="90" align="right">描述</td>
-							<td><input type="text" class="allInput" 
-								name="description" /></td>
+							<td><input type="text" class="allInput" name="description" /></td>
 							<td width="85" align="right"><input type="submit"
 								class="tabSub" value="查 询" /></td>
 						</tr>
@@ -58,8 +56,8 @@
 									<td>${status.index+1}</td>
 									<td>${message.command}</td>
 									<td>${message.description}</td>
-									<td><a href="#">修改</a>&nbsp;&nbsp;&nbsp; <a href="#">删除</a>
-									</td>
+									<td><a href="#">修改</a>&nbsp;&nbsp;&nbsp; <a
+										href="${basePath}DeleteOneServlet.Action?id=${message.id}">删除</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>
